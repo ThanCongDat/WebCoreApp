@@ -11,4 +11,9 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebCoreApp.Infrastucture\WebCoreApp.Infrastucture.csproj" />
+    <ProjectReference Include="..\WebCoreApp.Utilities\WebCoreApp.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

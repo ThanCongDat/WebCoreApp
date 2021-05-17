@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebCoreApp.Data.Interfaces
 {
-    public interface IMultiLanguage
+    public interface IMultiLanguage<T>
     {
         T LanguageId { set; get; }
     }

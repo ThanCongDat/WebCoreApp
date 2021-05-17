@@ -25,7 +25,9 @@ namespace WebCoreApp.Data.Entities
 
         [Required]
         [DefaultValue(0)]
-        public decimal PromotionPrice { get; set; }
+        public decimal Price { get; set; }
+
+        public decimal? PromotionPrice { get; set; }
 
         [Required]
         public decimal OriginalPrice { get; set; }
@@ -53,12 +55,12 @@ namespace WebCoreApp.Data.Entities
         public string SeoAlias {set;get;}
 
         [StringLength(255)]
-        public string SeoKeyWord {set;get;}
+        public string SeoKeywords {set;get;}
 
         [StringLength(255)]
         public string SeoDescription {set;get;}
 
-        public DateTime DataCreated {set;get;}
+        public DateTime DateCreated {set;get;}
         public DateTime DateModified {set;get;}
         public Status Status {set;get;}
     }
