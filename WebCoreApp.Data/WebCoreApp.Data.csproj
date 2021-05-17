@@ -21,7 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebCoreApp.Application\WebCoreApp.Application.csproj" />
     <ProjectReference Include="..\WebCoreApp.Infrastucture\WebCoreApp.Infrastucture.csproj" />
+    <ProjectReference Include="..\WebCoreApp.Utilities\WebCoreApp.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

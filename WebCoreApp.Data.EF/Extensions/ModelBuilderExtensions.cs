@@ -18,4 +18,3 @@ namespace WebCoreApp.Data.EF.Extensions
         public abstract void Configure(EntityTypeBuilder<TEntity> entity);
     }
 }
-}

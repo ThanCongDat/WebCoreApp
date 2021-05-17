@@ -20,12 +20,12 @@ namespace WebCoreApp.Data.Entities
         public string Image { get; set; }
         public bool? HomeFlag { get; set; }
 
-        public DateTime DataCreated { set; get; }
+        public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
         public Status Status { set; get; }
         public string SeoPageTitle { set; get; }
         public string SeoAlias { set; get; }
-        public string SeoKeyWord { set; get; }
+        public string SeoKeywords { set; get; }
         public string SeoDescription { set; get; }
         public int SortOrder { set; get; }
 
