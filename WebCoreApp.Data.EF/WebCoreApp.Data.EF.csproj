@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebCoreApp.Data\WebCoreApp.Data.csproj" />
+    <ProjectReference Include="..\WebCoreApp.Utilities\WebCoreApp.Utilities.csproj" />
   </ItemGroup>
 
 </Project>
