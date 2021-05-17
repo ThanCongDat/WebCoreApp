@@ -8,7 +8,7 @@ namespace WebCoreApp.Data.Interfaces
     {
         string SeoPageTitle { set; get; }
         string SeoAlias { set; get; }
-        string SeoKeyWord { set; get; }
+        string SeoKeywords { set; get; }
         string SeoDescription { set; get; }
     }
 }
