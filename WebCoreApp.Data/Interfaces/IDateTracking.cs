@@ -6,7 +6,7 @@ namespace WebCoreApp.Data.Interfaces
 {
     public interface IDateTracking
     {
-        DateTime DataCreated { set; get; }
+        DateTime DateCreated { set; get; }
         DateTime DateModified { set; get; }
     }
 }

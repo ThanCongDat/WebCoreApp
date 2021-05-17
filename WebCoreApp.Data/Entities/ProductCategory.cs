@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using WebCoreApp.Data.Enums;
 using WebCoreApp.Data.Interfaces;
 using WebCoreApp.Infrastucture.SharedKernel;
 
 namespace WebCoreApp.Data.Entities
 {
+    [Table("ProductCategories")]
     public class ProductCategory : DomainEntity<int>, IHasSeoMetaData, ISwitchable, ISortable, IDateTracking
     {
         public ProductCategory()
