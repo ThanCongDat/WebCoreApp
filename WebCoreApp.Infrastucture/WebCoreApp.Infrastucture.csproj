@@ -8,8 +8,4 @@
     <Folder Include="Enums\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\WebCoreApp.Utilities\WebCoreApp.Utilities.csproj" />
-  </ItemGroup>
-
 </Project>
