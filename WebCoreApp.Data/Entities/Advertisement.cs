@@ -9,7 +9,7 @@ using WebCoreApp.Infrastucture.SharedKernel;
 
 namespace WebCoreApp.Data.Entities
 {
-    [Table("Advertistments")]
+    [Table("Advertisements")]
     public class Advertisement : DomainEntity<int>, ISwitchable, ISortable
     {
         [StringLength(250)]

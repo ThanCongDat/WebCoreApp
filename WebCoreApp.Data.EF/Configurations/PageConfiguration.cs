@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +13,7 @@ namespace WebCoreApp.Data.EF.Configurations
         public override void Configure(EntityTypeBuilder<Page> entity)
         {
             entity.HasKey(c => c.Id);
-            entity.Property(c => c.Id).HasMaxLength(255).IsRequired();
+            entity.Property(c => c.Id).HasMaxLength(256).IsRequired();
         }
     }
 }
