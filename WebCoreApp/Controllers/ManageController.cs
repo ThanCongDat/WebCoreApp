@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -13,7 +11,7 @@ using System.Threading.Tasks;
 using WebCoreApp.Data.Entities;
 using WebCoreApp.Models.ManageViewModels;
 using WebCoreApp.Services;
-
+using WebCoreApp.Data.Entities;
 namespace WebCoreApp.Controllers
 {
     [Authorize]
@@ -540,6 +538,6 @@ namespace WebCoreApp.Controllers
             model.AuthenticatorUri = GenerateQrCodeUri(user.Email, unformattedKey);
         }
 
-        #endregion
+        #endregion Helpers
     }
 }
