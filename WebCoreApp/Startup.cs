@@ -30,12 +30,13 @@ namespace WebCoreApp
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-                o => o.MigrationsAssembly("WebCoreApp.Data.EF")));
+                o => o.MigrationsAssembly("TeduCoreApp.Data.EF")));
 
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            // Configure Identity
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings
@@ -58,15 +59,17 @@ namespace WebCoreApp
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
-            
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             services.AddTransient<IEmailSender, EmailSender>();
+
             services.AddTransient<DbInitializer>();
 
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+
             services.AddMvc();
         }
 
@@ -76,6 +79,7 @@ namespace WebCoreApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
             }
             else
@@ -92,7 +96,11 @@ namespace WebCoreApp
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute(name: "areaRoute",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
+
         }
     }
 }
